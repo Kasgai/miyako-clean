@@ -14,25 +14,30 @@
   <title>離島deプログラミング</title> <!-- ブラウザの上部などに表示されるタイトル -->
 
   <style>
- body {
-   background-image: url(/photo1.jpg);
- }
+    body {
+      background-image: url(/photo1.jpg);
+    }
 
- div{
-  text-align: center;
-  padding: 30px;
-  width: 500px;
-  height: 250px;
-  background: white
-}
+    form {
+      text-align: center;
+      height: 5px;
+      text-align: center;
+      position: relative;
+    }
 
-.container{
-  display: flex;
-  justify-content: center;
-  background: #FFFFFF;
-  flex-wrap: wrap;
-}
+    form {
+      position: absolute;
+      top: 30%;
+      left: 30%;
+      transform: translate(-30%, -30%);
+      width: 100%;
+    }
 
+    input {
+      width: 200px;
+      padding: 3px;
+      margin: 5px 0;
+    }
   </style>
 </head>
 
@@ -40,14 +45,19 @@
 
 
 <body>
-  <div class="container">
-    <h2>メールアドレス<input type="text" id="name1"></h>
-      <h2>パスワード<input type="text" id="pas1"></h2>
-      <span id="error"> </span>
-      <h4><input type="button" value="ログイン" id="register"></h4>
-    <h3><a href="reset.html">パスワードを忘れた方はこちら</a></h3>
-  </div>
-  <!--ここにデザインの中見を書く-->
+  <form name="login_form">
+    <div class="login_form_top">
+      <h1>ログイン画面</h1>
+      <p>ユーザーID、パスワードをご入力のうえ、ログインボタンをクリックしてください。</p>
+    </div>
+
+    <div class="login_form_btm">
+      <input type="Id" name="user_Id" placeholder="ユーザーIDを入力してください"><br>
+      <input type="password" name="password" placeholder="パスワードを入力してください">
+    </div>
+    <button type="submit">ログイン</button>
+
+  </form>
 
   <!--全ての表示する情報を読み込んだ後，JavaScriptを読み込みます-->
   <script type="module">
